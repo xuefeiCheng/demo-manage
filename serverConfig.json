@@ -1,0 +1,13 @@
+{
+  "axios": {
+    "timeout": 10000,
+    "url": "http://localhost:8082",
+    "json": "http://10.1.62.49:8080",
+    "websocket": "ws://10.1.85.150:8888"
+  },
+  "thirdSys": {
+    "logout": "http://10.1.62.49:8082",
+    "user": "http://10.1.62.13:8231/user",
+    "bdp": "http://10.1.62.13:8231/bdp"
+  }
+}

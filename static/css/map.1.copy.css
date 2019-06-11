@@ -1,0 +1,298 @@
+.relative{position: relative;overflow: hidden;}
+/* 层叠样式 */
+.data{
+  min-width: 0;
+  background: none;
+  /* 标准的语法 */
+}
+.data>.data-content {
+  padding: 31.5px 20px 0px 20px;
+}
+.back {
+  background: linear-gradient(#020b25, #0e2566, #020b25); /* 标准的语法 */
+}
+.smallScreen {
+  background: transparent;
+}
+.min-Width{
+  min-width: 2100px;
+}
+.global_box{
+  width:100%;
+  height: 94%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  /* padding: 0 4.3%; */
+}
+/* 第一层布局 左中右 */
+/* 原始中间左右留白4.3% 尺寸2100px */
+.global_box .global_left{margin-right:0.5%;height:100%;width:17.28%;}
+.global_box .global_middle{margin-right:0.5%;width:65.3%;min-width: 2000px;}
+.global_box .global_right{height:100%;width:17.28%;}
+/* 第二层 左侧 & 右侧 上中下 */
+.global_left .global_left_box, .global_right .global_left_box{
+  width: 100%;
+  height: calc(100% - 111px);
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+.global_left_box .top, .global_left_box .middle, .global_left_box .bottom {
+  width: 100%;
+  height: 33.3%;
+  flex: 1;
+  overflow: hidden;
+}
+/* 统一底部有间距 */
+.global_box .global_left, .global_box .global_right{
+  padding-bottom: 20px;
+}
+/*分割块 */
+.dividerBox{height: 111px;width: 100%;}
+/* 右侧 时间显示 */
+.mapTab_global .timeBox {position:absolute;right:40px;top:20px;font-size: 24px;color:#00DAFC;text-align:right;font-family: 'timerFont'}
+/* 底部winHome iview */
+.navbox .ivu-drawer-content{
+  background-color: #252525;
+}
+.navbox .ivu-drawer-header {display: none;}
+.navbox .ivu-drawer-body {height: 100%;}
+.navbox .ivu-drawer-wrap {overflow: hidden;}
+/* 底部 winHome */
+.top-bar, .top-bar .navbox-tiles, .navbox-trigger, .navbox-tiles .tile, .navbox-tiles .tile .icon .fa, .navbox-tiles .tile .title {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.navbox-tiles:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Core Styles */
+.top-bar {
+  /* height: 50px; */
+  position: relative;
+  z-index: 1000;
+}
+.top-bar .bar {
+  background-color: #252525;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 2;
+}
+/* top-bar 位置 */
+.top-bar .bar-position {
+  top:20px;
+  left: 10px;
+}
+.top-bar .navbox {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: all .2s;
+          transition: all .2s;
+}
+.top-bar .navbox-tiles {
+  -webkit-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+          transform: translateY(200px);
+}
+.top-bar.navbox-open .navbox-trigger {
+  background-color: #484747;
+}
+.top-bar.navbox-open .navbox {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity .3s, -webkit-transform .3s;
+          transition: opacity .3s, transform .3s;
+}
+.top-bar.navbox-open .navbox-tiles {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.navbox-trigger {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.navbox-trigger .fa {
+  font-size: 20px;
+  color: #fff;
+}
+.navbox-trigger:hover {
+  background-color: #484747;
+}
+
+.navbox {
+  background-color: #484747;
+  width: 100%;
+  max-width: 380px;
+  -webkit-backface-visibility: initial;
+          backface-visibility: initial;
+}
+
+.navbox-tiles {
+  width: 100%;
+  padding: 25px;
+}
+.navbox-tiles-small {
+  padding: 5px;
+}
+.navbox-tiles .tile {
+  display: block;
+  background-color: #3498db;
+  width: 30.3030303030303%;
+  height: 0;
+  padding-bottom: 29%;
+  float: left;
+  border: 2px solid transparent;
+  color: #fff;
+  position: relative;
+}
+.navbox-tiles-small .tile {
+  width: 47.5%;
+}
+.navbox-tiles .tile .icon {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.navbox-tiles .tile .icon .fa {
+  font-size: 35px;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  -webkit-transform: translate(50%, 50%);
+      -ms-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  -webkit-backface-visibility: initial;
+          backface-visibility: initial;
+}
+.navbox-tiles .tile .title {
+  padding: 5px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.navbox-tiles .tile:hover {
+  border-color: #fff;
+  text-decoration: none;
+}
+.navbox-tiles .tile:not(:nth-child(3n+3)) {
+  margin-right: 4.54545454545455%;
+}
+.navbox-tiles-small .tile:not(:nth-child(2n)) {
+  margin-right: 5%;
+}
+.navbox-tiles-small .tile:nth-child(2n) {
+  margin-right: 0;
+}
+.navbox-tiles .tile:nth-child(n+4) {
+  margin-top: 15px;
+}
+.navbox-tiles-small .tile:nth-child(n+3) {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 370px) {
+  .navbox-tiles .tile .icon .fa {
+    font-size: 25px;
+  }
+  .navbox-tiles .tile .title {
+    padding: 3px;
+    font-size: 11px;
+  }
+}
+
+/* 6块小屏 */
+.smallScreen > .data-title2 {
+  padding: 0 0 31.5px;
+}
+.smallScreen  > .data-content2{
+  height: calc(100% - 32px);
+  padding: 0 0 0 40px;
+}
+.smallScreen > .data-content2-right {
+  padding:0 40px 0 0;
+}
+.smallScreen .info-title2 {
+  margin-left: -95px;
+  font-size: 22px;
+}
+.smallScreen .info-list {
+  margin-top: 0;
+  padding-top: 8%;
+}
+/* 诈骗电话 */
+.smallScreen>.data-content2 .zpdh_title {
+  font-size: 15px;
+  /* position: absolute;
+  left: 5px;
+  top:15px; */
+}
+/* 诈骗事件关联 */
+.smallScreen .info-height{height: 100%;}
+.smallScreen .row_items{height: 35%;}
+.smallScreen .row_items{height: 50px;}
+.smallScreen .row_item{
+  padding: 0;
+  height: 100%;
+  margin: 0 5px;
+}
+.smallScreen .row_describe{
+  height: 50%;
+  margin-top: 2%;
+  overflow: hidden;
+}
+.smallScreen .row_item_title, .smallScreen .row_item_content {
+  font-size: 12px;
+}
+.smallScreen .row_describe_title, .smallScreen .row_describe_content {
+  font-size: 12px;
+}
+.smallScreen .row_describe_content {
+  padding: 5px 8px;
+}
+/* top */
+.smallScreen .infotel {
+  height: 30px !important;
+  line-height: 30px !important;
+}
+.smallScreen .telIcon{
+  top: 7px;
+}
+.shuiyin {
+  background: url('../img/shuiyin.png')
+}

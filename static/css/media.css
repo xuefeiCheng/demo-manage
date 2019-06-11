@@ -1,0 +1,67 @@
+/* 媒体查询 响应式解决方案 */
+@media screen and (max-width: 1920px) {
+  /* .global_box .global_middle {width: 71.44%} */
+  /* 界面缩小版本 */
+  .global_box .global_left{width:13.44%;}
+  .relative{width: 2940px;}
+  #transform {
+    transform: scale(0.6530612244897959,1);
+    transform-origin:top left;
+  }
+  .min-Width{
+    min-width: 2100px;
+  }
+
+  /* 细节调整版本 */
+  /* html {
+    font-size: 12px;
+  }
+  .inter_top_box .inter_top_boxL {
+    flex: 0 0 27%;
+  }
+  .inter_top_box .inter_top_boxR {
+    flex: 0 0 17%;
+  }
+  
+  .inter_TBL_box_top .inter_TBL_box_top_item {
+    margin-right: 5px;
+  }
+  .box_title {
+    font-size: 14px;
+  }
+  .drawer {
+    width: 18.28%;
+  }
+  .drawer span {
+    font-size: 16px;
+  }
+  
+  .info-title, .info-title2, .smallScreen .info-title2{
+    font-size: 16px;
+    height: 37px;
+    line-height: 37px;
+    background-size: 100% 100%;
+  } */
+}
+@media screen and (min-width: 4096px) {
+  /* #transform {
+    transform: scale(1.3931972789115645,1.5);
+    transform-origin:top left;
+  } */
+  .inter_mapTab .inter_title {
+    color: #de6d6d;
+  }
+}
+
+
+  /* 4k 2560*1620 */
+/* #transform {
+  transform: scale(0.8707482993197279,1);
+  transform-origin:top left;
+} */
+  /* 4k 4096*2160 */
+/* #transform {
+  transform: scale(1.3931972789115645,1);
+  transform-origin:top left;
+} */
+/* html,body,#app {height: 100%; min-width: 2940px;} */
